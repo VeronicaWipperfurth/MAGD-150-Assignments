@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/VeronicaWipperfurth/MAGD-150-Assignments/edit/gh-pages/README.md) to maintain and preview the content for your website in Markdown files.
+# Assignment 1
+My first project is from week one. The theme was outer space. I designed an alien in a UFO.
+You can find it here: https://github.com/VeronicaWipperfurth/MAGD-150-Assignments/blob/gh-pages/Assignment%201
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Assignment 2
+My second project is from week two. The theme was balloons. I used several different shapes and colors to demonstrate those skills.
+You can find it here: https://github.com/VeronicaWipperfurth/MAGD-150-Assignments/blob/gh-pages/Assignment%202
 
-### Markdown
+# Assignment 3
+My third project is from week three. The theme was screensaver. I created multiple shapes which followed the mouse around the screen.
+You can find it here: https://github.com/VeronicaWipperfurth/MAGD-150-Assignments/blob/gh-pages/Assignment%203
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# Assignment 4
+My fourth project is from week four. The theme was pizza. I created an image of a pizza which responds to user input. When a key or the mouse is pressed, toppings are added. 
+You can find it here: https://github.com/VeronicaWipperfurth/MAGD-150-Assignments/blob/gh-pages/Assignment%204
 
-```markdown
-Syntax highlighted code block
+# Assignment 5
+My fifth project is from week five. The theme was alternate dimensions. I used two sets of buttons which made either a line of text or an image appear when clicked.  
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/VeronicaWipperfurth/MAGD-150-Assignments/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
