@@ -1,0 +1,39 @@
+void setup(){
+  size(1000,1000);
+  background(25,25,75);
+  frameRate(60);
+  constrain(mouseX,25,250);
+  /*I didn't quite understand the calculation and trig functions so I included
+  them (constrain, max, and min), but I don't know if they actually do anything
+  in this sketch*/
+
+}
+void draw(){
+  
+println(mouseX,mouseY);
+println(frameCount);
+
+float a = 50;
+min(20,100);
+float b = a/2.5;
+float c = 1.5;
+max(100,500);
+
+//purple point
+pushStyle();
+stroke(300%200,300%100,300%200);
+strokeWeight(50);
+point(mouseX*c,mouseY*c);
+popStyle();
+
+//light blue ellipse
+stroke(0);
+fill(300%200,25*7,210);
+ellipse(mouseX,mouseY,pmouseY+b,pmouseX-a);
+
+//dark blue rectangle
+noStroke();
+fill(300%150,40*2,200);
+rect(2*mouseX,1.5*mouseY,25,25); 
+  
+}
