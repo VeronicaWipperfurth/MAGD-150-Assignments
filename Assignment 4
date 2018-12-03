@@ -1,0 +1,78 @@
+//I got the code for the checker pattern from Ryan Neves on a processing website
+//The URL is: https://www.openprocessing.org/sketch/20534#
+//I used the same general format but adjusted the variables
+
+int size = 200;
+float x = width*0.5;
+float y = height*0.5;
+int speed = 50;
+int radius = 450;
+int i = 150;
+
+void setup(){
+ size (1000,1000);
+
+}
+
+void draw(){
+  //checker board background
+pushStyle();  
+  for (int a = 0; a < width; a += size) {
+  for (int b = 0; b < height; b += size) { 
+    if ((a+b) % 80 ==0) {  
+    fill(255, 0, 0); 
+    } else { 
+    fill(255); } 
+    rect (a, b, size, size);
+   }
+  }
+popStyle();
+
+//pizza crust
+  ellipse(x,y,700,700);
+  if(mousePressed == true) {
+       fill(255,200,100);
+     }else{
+      fill(255);
+  }
+  
+  if(i ==150){
+    ellipse(x,y,700,700);
+    x = constrain(x + random(-speed, speed), radius, width - radius);
+    y = constrain(y + random(-speed, speed), radius, width - radius);
+     
+  }
+      
+//pepperoni
+  if(keyPressed == true) {
+    fill(255,50,50);
+  } else {
+    fill(255); 
+  }
+  ellipse(350,350,100,100);
+  ellipse(650,650,100,100);
+  ellipse(350,650,100,100);
+  ellipse(650,350,100,100);
+  ellipse(500,500,100,100);
+  
+  
+//cheese
+  pushStyle();
+  int i = 150 ;
+  while (i <751) {
+    //horizontal lines
+    line(i,350, i+50, 400);
+    line(i,450, i+50, 500);
+    line(i,550, i+50, 600);
+    line(i,650, i+50, 700);
+    //vertical lines
+    line(300, i, 350, i+50);
+    line(400, i, 450, i+50);
+    line(500, i, 550, i+50);
+    line(600, i, 650, i+50);
+    stroke(250,250,225);
+    strokeWeight(10);
+    i = i + 50;
+  }
+    popStyle();
+}
