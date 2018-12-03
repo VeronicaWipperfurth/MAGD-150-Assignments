@@ -1,0 +1,128 @@
+int rectX, rectY;
+int circleX, circleY;
+int rectSize = 150;
+int circleSize = 200;
+color rectColor, circleColor, baseColor;
+color rectHighlight, circleHighlight;
+color currentColor;
+boolean rectOver = false;
+boolean circleOver = false;
+
+void setup(){
+  size(1000,1000);
+  rectColor= color(0,255,100);
+  rectHighlight= color(255,255,255);
+  circleColor= color(255,0,0);
+  circleHighlight= color(255,255,255);
+  baseColor = color(0);
+  currentColor=baseColor;
+  circleX = width/4;
+  circleY=height/2;
+  rectX=width/4+500;
+  rectY=height/2;
+  ellipseMode(RADIUS);
+  rectMode(CENTER);
+}
+
+void draw() {
+  update(mouseX,mouseY);
+  background(currentColor);
+  
+  if (rectOver) {
+    fill(rectHighlight);
+  } else { 
+    fill(rectColor);
+  }
+  rect(rectX, rectY, rectSize, rectSize);
+  textSize(32);
+  fill(255);
+  text("press", 710, 515); 
+  
+  if(circleOver){
+    fill(circleHighlight);
+  } else {
+    fill(circleColor);
+  }
+  ellipse(circleX,circleY, circleSize, circleSize);
+  textSize(50);
+  fill(255);
+  text("DO NOT PRESS", 75, 515); 
+  
+}
+
+void update(int x, int y){
+  if ( overCircle(circleX, circleY, circleSize) ){
+    circleOver = true;
+    rectOver = false;
+  } else if (overRect(rectX, rectY, rectSize, rectSize)){
+    rectOver = true;
+    circleOver = false;
+  }else{
+    circleOver = rectOver = false;
+  }
+}
+
+void mousePressed(){
+  if (circleOver){
+  textSize(20);
+  fill(255,0,0);
+  text("YOU LOSE", 500, 775); 
+  }
+  if (rectOver){
+    //cat with human on a leash
+    //this is my alternate dimension portion
+    noStroke();
+    triangle(350, 100, 350, 50, 375, 60); //ears
+    triangle(425, 60, 450, 50, 450, 100);
+    ellipse(400, 100, 50, 50); //head
+    stroke(0);
+    strokeWeight(10);
+    point(425, 90); //eyes
+    point(375, 90);
+    bezier(375,125,380,145,420,145,425,125); //smile
+    stroke(255);
+    strokeWeight(3);
+    line(400,150,400,250); //body
+    line(375,200,400,180); //arms
+    line(400,180,425,200); 
+    line(375,300,400,250); //legs
+    line(400,250,425,300);
+    ellipse(425,200,5,5); //leash
+    line(425,200,600,225);
+    //human
+    ellipse(600,225,20,20); //head
+    stroke(0);
+    strokeWeight(8);
+    point(590,215); //eyes
+    point(610,215);
+    line(590,235,610,235); //mouth
+    stroke(255);
+    strokeWeight(3);
+    line(600,245,600,275); //body
+    line(580,255,620,255); //arms
+    line(600,275,580,285); //legs
+    line(600,275,620,285);
+
+   
+  }
+}
+
+boolean overRect(int x, int y, int width, int height){
+  if (mouseX >= x && mouseX <= x+width && mouseY >=y && mouseY <=y+height) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+boolean overCircle(int x, int y, int diameter){
+  float disX = x - mouseX;
+  float disY = y - mouseY;
+  if (sqrt(sq(disX) + sq(disY)) < diameter/2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+    
