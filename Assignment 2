@@ -1,0 +1,45 @@
+void setup(){
+size(500,500);
+background(50,50,150);
+
+}
+
+void draw(){
+
+//far left balloon
+colorMode(RGB,255);
+fill(255,0,0);
+beginShape();
+vertex(40,150);
+vertex(25,100);
+vertex(40,60);
+vertex(75,40);
+vertex(110,60);
+vertex(125,100);
+vertex(110,150);
+vertex(75,180);
+endShape(CLOSE);
+line(75,180,75,400);
+  
+//second ballon from the left
+colorMode(HSB,360,100,100);
+fill(50,75,100);
+arc(200,200,100,100,radians(180),radians(360),OPEN);
+triangle(200,300,150,200,250,200); 
+noFill();
+bezier(200,300,230,350,150,360,200,400);
+  
+//third balloon from the left
+
+fill(#17E31F);
+bezier(350,250,150,50,550,50,350,250);
+line(350,250,350,450);
+
+//far right balloon
+colorMode(RGB,255);
+fill(175,0,175);
+triangle(450,150,410,25,490,25);
+noFill();
+bezier(450,150,480,200,400,210,450,250);
+  
+}
